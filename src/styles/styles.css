@@ -1,0 +1,130 @@
+.tsf-field {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    position: relative;
+    padding: 3px 2px;
+    margin-bottom: 10px;
+}
+.tsf-field:last-child {
+    margin-bottom: 0;
+}
+.tsf-field--array, .tsf-field--object {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+}
+
+.tsf-field__header {
+    width: 100%;
+    flex: 1 0 100%;
+    font-weight: 500;
+    margin-bottom: 18px;
+    color: #555;
+}
+
+.tsf-field__content {
+    flex-grow: 1;
+}
+
+.tsf-field__controls {
+    display: flex;
+}
+.tsf-field__controls::after {
+    content: "";
+    position: absolute;
+    background: #fff9ee;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    opacity: 0;
+}
+.tsf-field__control-btn {
+    padding: 0 0.65em;
+    margin-right: -1px;
+    text-align: center;
+    cursor: pointer;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 0;
+}
+.tsf-field__control-btn:hover {
+    background-color: #f8f8f8;
+}
+.tsf-field__control-btn--remove:hover {
+    background-color: #ffeaea;
+}
+.tsf-field__control-btn:disabled {
+    cursor: default;
+    background-color: #f2f2f2;
+}
+.tsf-field__control-btn:disabled .tsf-btn__icon,
+.tsf-field__control-btn:disabled .tsf-btn__text {
+    opacity: 0.6;
+}
+.tsf-field__control-btn:first-child {
+    border-top-left-radius: 10rem;
+    border-bottom-left-radius: 10rem;
+}
+.tsf-field__control-btn:last-child {
+    border-top-right-radius: 10rem;
+    border-bottom-right-radius: 10rem;
+}
+.tsf-field__control-btn .tsf-btn__text {
+    display: none;
+}
+.tsf-field__control-btn .tsf-btn__icon {
+    display: inline-block;
+    width: 1.3em;
+    height: 1.3em;
+    line-height: 1;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.tsf-field__control-btn--moveup .tsf-btn__icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='currentColor' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5'/%3E%3C/svg%3E");
+}
+.tsf-field__control-btn--movedown .tsf-btn__icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='currentColor' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4'/%3E%3C/svg%3E");
+}
+.tsf-field__control-btn--remove .tsf-btn__icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='currentColor' viewBox='0 0 16 16'%3E%3Cpath d='M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708'/%3E%3C/svg%3E");
+}
+.tsf-field__controls:hover::after {
+    opacity: 1;
+}
+
+.tsf-widget {
+    display: flex;
+    width: 100%;
+}
+.tsf-widget--multicheckbox {
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+.tsf-widget__header {
+  width: 33%;
+  padding-top: 8px;
+}
+.tsf-widget--multicheckbox > .tsf-widget__header {
+    float: left;
+}
+.tsf-widget__header label {
+    display: inline-block;
+}
+.tsf-widget--checkbox label,
+.tsf-widget--multicheckbox .tsf-widget__option label {
+    cursor: pointer;
+}
+.tsf-widget__content {
+    width: 67%;
+}
+.tsf-widget__help-text {
+    font-size: 0.88em;
+    color: #777;
+}
