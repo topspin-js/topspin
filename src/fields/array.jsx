@@ -36,8 +36,13 @@ export default function ArrayField({data, schema, name, level, parentType, ...pr
 
         let childType = normalizeKeyword(schema.items.type);
 
+        let title = childSchema.title || '';
+
+        if (childSchema.titleCounter)
+            title = title + ' ' + childSchema.titleCounter.replaceAll('<counter>', i + 1);
+
         let childProps = {
-            schema: {...childSchema},
+            schema: {...childSchema, title: title},
             level: level + 1,
             removable: childRemovable,
             parentType: 'array',
