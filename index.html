@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="/stories/browser/styles/story.css" />
+    <title>Topspin Browser API Tests</title>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h1>Topspin Browser API Tests</h1>
+        <div class="tabs" id="tabs"></div>
+        <p class="story-description" id="storyDescription"></p>
+        <div class="story-controls" id="storyControls"></div>
+    </div>
+    
+    <div class="story-content">
+        <div class="story-col">
+            <textarea class="story-data" id="storyFormData" disabled rows="10"></textarea>
+        </div>
+        <div class="story-col">
+            <div id="storyForm"></div>
+        </div>
+    </div>
+</div>
+<script type="application/javascript" src="/node_modules/react/umd/react.development.js"></script>
+<script type="application/javascript" src="/node_modules/react-dom/umd/react-dom.development.js"></script>
+<script type="application/javascript" src="/stories/browser/dist/topspin.umd.js"></script>
+<script type="module">
+    import init from '/stories/browser/main.js';
+    init();
+</script>
+</body>
+</html>
